@@ -13,6 +13,7 @@
     "@strapi/provider-upload-cloudinary": "^4.21.0",
     "axios": "^1.6.8",
     "cloudinary": "^2.0.3",
+    "framer-motion": "^11.0.24",
     "lucide-react": "^0.363.0",
     "next": "14.1.4",
     "pg": "^8.11.3",

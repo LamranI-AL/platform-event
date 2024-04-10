@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const apiClient = axios.create({
-  baseURL: "http://localhost:1337/api",
+  baseURL: "https://lovely-horses-0fb3c65a2e.strapiapp.com/api",
 });

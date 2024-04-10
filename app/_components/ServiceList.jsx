@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import ServiceCard from "./ServiceCard";
 import { apiClient } from "../api-costum";
+import { motion } from "framer-motion";
 
 const ServiceList = () => {
   useEffect(() => {
@@ -19,22 +20,30 @@ const ServiceList = () => {
         alert(`Error! ${error}`);
       });
   };
+
+  const variants = {
+    initial: { opacity: 0, y: 20 },
+    inView: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1, staggerChildren: 0.4 },
+    },
+  };
   const displayServices = () => {
     return services?.map((service) => {
       return <ServiceCard service={service} />;
     });
   };
   return (
-    <>
-      {/* <h1 className="text-2xl">Services </h1> */}
+    <motion.div initial="initial" variants={variants} whileInView="inView">
       <h1
-        id="projects"
+        id="services"
         className="text-xl text-center mt-32 font-extrabold sm:text-4xl m-6"
       >
         Services
       </h1>
       <div className="flex flex-wrap lg:my-6 ">{displayServices()}</div>
-    </>
+    </motion.div>
   );
 };
 

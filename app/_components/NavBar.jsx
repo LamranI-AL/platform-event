@@ -2,13 +2,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { useUser } from "@clerk/nextjs";
-import {
-  ClerkProvider,
-  SignedIn,
-  SignedOut,
-  SignInButton,
-  UserButton,
-} from "@clerk/nextjs";
+import { UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import { ShoppingCart } from "lucide-react";
 
@@ -29,11 +23,7 @@ const NavBar = () => {
     };
   }, []);
   return (
-    <header
-      className={`bg-white fixed  w-full z-10 transition-all duration-300 ${
-        scrolled ? "shadow-md  " : " mt-0"
-      }`}
-    >
+    <header className={`bg-white  w-full transition-all duration-300`}>
       <div className="flex h-16 max-w-screen-xxl items-center gap-8 sm:px-6 lg:px-8 shadow-md">
         <Link className="block text-teal-600" href="#">
           <span className="sr-only">Home</span>
@@ -56,7 +46,7 @@ const NavBar = () => {
               <li>
                 <Link
                   className="text-gray-500 transition hover:text-gray-500/75"
-                  href="#"
+                  href="#services"
                 >
                   {" "}
                   Services{" "}
@@ -132,7 +122,7 @@ const NavBar = () => {
             </div>
           ) : (
             <div className="flex items-center gap-4">
-              <h2 className="flex text-red-800 gap-1 cursor-pointer ">
+              <h2 className="flex text-teal-600 gap-1 cursor-pointer ">
                 <ShoppingCart />
                 (0)
               </h2>
