@@ -1,11 +1,11 @@
 "use client";
+import BreadCrum from "@/app/_components/BreadCrum";
+import { apiClient } from "@/app/api-costum";
 import React, { useEffect, useState } from "react";
-import EventCard from "./EventCard";
-import axios from "axios";
-import { apiClient } from "../api-costum";
-import { motion } from "framer-motion";
+import ProductHero from "./_components/ProductHero";
+import ProductSeggestion from "./_components/ProductSeggestion";
 
-const EventList = () => {
+const page = () => {
   const eventts = [
     {
       _id: {
@@ -207,40 +207,42 @@ const EventList = () => {
         "https://media.licdn.com/dms/image/C4E22AQEDXXt-sqXBuA/feedshare-shrink_800/0/1676557608389?e=1712188800&v=beta&t=jcFGptMF0GtqXXdVHLl2v1eB0i0SiNqXfsjD7V2q5pA",
     },
   ];
-  const variants = {
-    initial: { opacity: 0, y: 20 },
-    inView: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 1, staggerChildren: 0.4 },
-    },
-  };
+  // const [event, setEvent] = useState({});
+  // const [events, setEvents] = useState([]);
+  // const [error, setError] = useState("");
+  // useEffect(() => {
+  //   displayEventById(params?.eventsId);
+  // }, []);
+  // const getEventsFilted = (category) => {
+  //   apiClient.get(`/event`).then(async (data) => {
+  //     const tempTable = data.data;
+  //     console.log(tempTable);
+  //     setEvents(tempTable);
+  //   });
+  // };
+  // const displayEventById = (id) => {
+  //   apiClient
+  //     .get(`/event`)
+  //     .then((res) => {
+  //       console.log(res.data);
+  //       // const tempTable = res?.data;
+  //       // setEvent(tempTable);
+  //     })
+  //     .catch((err) => {
+  //       setError(err.message);
+  //     });
+  // };
+  // getEventsFilted(event);
 
-  const displayEvent = () => {
-    return eventts
-      ?.map((event) => {
-        return <EventCard key={event.id} event={event} />;
-      })
-      .slice(0, 3);
-  };
   return (
-    <motion.div
-      initial="initial"
-      variants={variants}
-      whileInView="inView"
-      viewport={{ once: true }}
-    >
-      <h1
-        id="projects"
-        className="text-xl text-center font-extrabold mt-32 sm:text-4xl m-6 "
-      >
-        Projects
-      </h1>
-      <div className="flex flex-wrap lg:my-6 ">
-        {eventts?.length !== 0 && displayEvent()}
+    <div>
+      <div class="justify-center m-4">
+        <BreadCrum actuellPath={"Event-details"} ancienPath={`Home`} />
       </div>
-    </motion.div>
+      {/* {event?.length !== 0 && <ProductHero event={event} />} */}
+      <ProductSeggestion events={eventts} />
+    </div>
   );
 };
 
-export default EventList;
+export default page;

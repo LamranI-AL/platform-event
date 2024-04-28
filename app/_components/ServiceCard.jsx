@@ -6,11 +6,7 @@ const ServiceCard = ({ service }) => {
   return (
     <>
       <article className="w-full p-1 border-t-4 border-teal-950 lg:w-1/4 lg:mx-10 my-3 rounded-2xl shadow transition hover:shadow-lg">
-        <img
-          alt=""
-          src={service?.attributes?.serviceImage?.data?.attributes?.url}
-          className="h-56 w-full rounded-xl object-cover"
-        />
+        <img alt="" src="" className="h-56 w-full rounded-xl object-cover" />
 
         <div className="bg-white p-4 sm:p-6">
           {/* <time datetime="2022-10-10" className="block text-xs text-gray-500">
@@ -18,18 +14,12 @@ const ServiceCard = ({ service }) => {
             10th Oct 2022{" "}
           </time> */}
 
-          <Link href={`/service-details/${service.id}`}>
-            <h3 className="mt-0.5 text-lg text-gray-900">
-              {service.attributes.serviceName}
-            </h3>
+          <Link href={`/service-details`}>
+            <h3 className="mt-0.5 text-lg text-gray-900">{service.name}</h3>
           </Link>
 
           <p className="mt-2 line-clamp-3 text-sm/relaxed text-gray-500">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae
-            dolores, possimus pariatur animi temporibus nesciunt praesentium
-            dolore sed nulla ipsum eveniet corporis quidem, mollitia itaque
-            minus soluta, voluptates neque explicabo tempora nisi culpa eius
-            atque dignissimos. Molestias explicabo corporis voluptatem?
+            {service.description}
           </p>
         </div>
         <div className="mt-2 flex flex-col p-3 gap-2 text-center">
@@ -43,7 +33,7 @@ const ServiceCard = ({ service }) => {
 
           <Link
             className="block w-full rounded px-12 py-3 text-sm font-medium text-teal-600 shadow hover:text-teal-800 focus:outline-none focus:ring active:text-teal-950 sm:w-auto"
-            href={`/service-details/${service.id}`}
+            href={`/service-details`}
           >
             Learn More
           </Link>

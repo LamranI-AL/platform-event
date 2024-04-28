@@ -5,21 +5,44 @@ import { apiClient } from "../api-costum";
 import { motion } from "framer-motion";
 
 const ServiceList = () => {
-  useEffect(() => {
-    getServices();
-  }, []);
-  const [services, setServices] = useState([]);
-  const getServices = () => {
-    apiClient
-      .get("/services?populate=*")
-      .then((response) => {
-        console.log(response.data.data);
-        setServices(response.data.data);
-      })
-      .catch((error) => {
-        alert(`Error! ${error}`);
-      });
-  };
+  const servicess = [
+    {
+      id: 1,
+      name: "anniversaire",
+      description: "anniv description ",
+    },
+    {
+      id: 2,
+      name: "fistivale",
+      description: "fistivale description ",
+    },
+    {
+      id: 3,
+      name: "compitition",
+      description: "compitition description ",
+    },
+    {
+      id: 4,
+      name: "event scolaire",
+      description: "event scolaire description ",
+    },
+  ];
+  // useEffect(() => {
+  //   getServices();
+  // }, []);
+  // const [services, setServices] = useState([]);
+  // const getServices = () => {
+  //   apiClient
+  //     // .get("/services?populate=*")
+  //     .get("/event")
+  //     .then((response) => {
+  //       console.log(response.data.data);
+  //       setServices(response.data.data);
+  //     })
+  //     .catch((error) => {
+  //       alert(`Error! ${error}`);
+  //     });
+  // };
 
   const variants = {
     initial: { opacity: 0, y: 20 },
@@ -30,7 +53,7 @@ const ServiceList = () => {
     },
   };
   const displayServices = () => {
-    return services?.map((service) => {
+    return servicess?.map((service) => {
       return <ServiceCard service={service} />;
     });
   };

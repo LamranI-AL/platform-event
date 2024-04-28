@@ -9,7 +9,7 @@ const ProductHero = ({ event }) => {
           <div class="w-full md:w-1/2">
             <div class="bg-white rounded-lg shadow-lg p-6 ml-2">
               <img
-                src={event.attributes.image.data.attributes.url}
+                src={event.imgUrl}
                 alt="Product Image"
                 class="w-full rounded-md mb-4 object-cover h-60"
               />
@@ -18,16 +18,14 @@ const ProductHero = ({ event }) => {
               </h2>
               <ul class="text-gray-700">
                 <li class="mb-2">
-                  <span class="font-semibold">Presence count:</span>{" "}
-                  {event.attributes.presentCount}
+                  <span class="font-semibold">Presence count:</span> 200
                 </li>
-                <li class="mb-2">
+                {/* <li class="mb-2">
                   <span class="font-semibold">Date:</span>{" "}
                   {event.attributes.date}
-                </li>
+                </li> */}
                 <li class="mb-2">
-                  <span class="font-semibold">Locale:</span>{" "}
-                  {event.attributes.locale}
+                  <span class="font-semibold">Locale:</span> ensa bm
                 </li>
                 <li class="mb-2">
                   <span class="font-semibold">Satus:</span> Finished
@@ -43,9 +41,7 @@ const ProductHero = ({ event }) => {
               <h2 class="text-2xl text-gray-800 font-semibold mb-2">
                 Event Information
               </h2>
-              <p class="text-gray-700 mb-4">
-                {event.attributes.descriptionDetaille}
-              </p>
+              <p class="text-gray-700 mb-4">{event.description}</p>
               <a href="#" class="text-teal-600 hover:text-teal-700">
                 Learn More
               </a>

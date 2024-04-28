@@ -1,12 +1,12 @@
 import EventCard from "@/app/_components/EventCard";
 import React from "react";
-
-import Link from "next/link";
 const ProductSeggestion = ({ events }) => {
   const displayEventSugg = () => {
-    return events.map((eve) => {
-      return <EventCard event={eve} />;
-    });
+    return events
+      ?.map((eve) => {
+        return <EventCard event={eve} />;
+      })
+      .slice(0, 5);
   };
   return (
     <>
