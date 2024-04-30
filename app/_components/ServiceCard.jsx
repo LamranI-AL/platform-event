@@ -2,13 +2,14 @@ import React from "react";
 import Link from "next/link";
 
 const ServiceCard = ({ service }) => {
+  console.log(service.img);
   //   console.log(service.id);
   return (
     <>
       <article className="w-full p-1 border-t-4 border-teal-950 lg:w-1/4 lg:mx-10 my-3 rounded-2xl shadow transition hover:shadow-lg">
         <img
           alt=""
-          src={service.img}
+          src={`${service.img}`}
           className="h-56 w-full rounded-xl object-cover"
         />
 

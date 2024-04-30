@@ -46,7 +46,7 @@ const NavBar = () => {
               <li>
                 <Link
                   className="text-gray-500 transition hover:text-gray-500/75"
-                  href="#services"
+                  href="/#services"
                 >
                   {" "}
                   Services{" "}
@@ -56,7 +56,7 @@ const NavBar = () => {
               <li>
                 <Link
                   className="text-gray-500 transition hover:text-gray-500/75"
-                  href="#projects"
+                  href="/#projects"
                 >
                   {" "}
                   Projects{" "}
@@ -76,7 +76,7 @@ const NavBar = () => {
               <li>
                 <Link
                   className="text-gray-500 transition hover:text-gray-500/75"
-                  href="#"
+                  href="/apply"
                 >
                   {" "}
                   Contact Us{" "}
