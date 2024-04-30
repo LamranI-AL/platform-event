@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import ServiceCard from "./ServiceCard";
 import { apiClient } from "../api-costum";
 import { motion } from "framer-motion";
+// import imageCompitition from "@/app/service-details/asset/images/";
 
 const ServiceList = () => {
   const servicess = [
@@ -10,21 +11,31 @@ const ServiceList = () => {
       id: 1,
       name: "anniversaire",
       description: "anniv description ",
+      img: "./app/service-details/asset/images/Work anniversary-amico.png",
     },
     {
       id: 2,
       name: "fistivale",
       description: "fistivale description ",
+      img: "/platform-event/app/service-details/asset/images/Festivities-cuate.png",
     },
     {
       id: 3,
       name: "compitition",
       description: "compitition description ",
+      img: "../service-details/asset/images/Business competition-rafiki.png",
     },
     {
       id: 4,
       name: "event scolaire",
       description: "event scolaire description ",
+      img: "/platform-event/app/service-details/asset/images/Images-pana.png",
+    },
+    {
+      id: 5,
+      name: "sortie",
+      description: "sortie description ",
+      img: "/platform-event/app/service-details/asset/images/Eating together-bro.png",
     },
   ];
   // useEffect(() => {

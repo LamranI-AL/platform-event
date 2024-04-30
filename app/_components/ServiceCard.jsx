@@ -6,7 +6,11 @@ const ServiceCard = ({ service }) => {
   return (
     <>
       <article className="w-full p-1 border-t-4 border-teal-950 lg:w-1/4 lg:mx-10 my-3 rounded-2xl shadow transition hover:shadow-lg">
-        <img alt="" src="" className="h-56 w-full rounded-xl object-cover" />
+        <img
+          alt=""
+          src={service.img}
+          className="h-56 w-full rounded-xl object-cover"
+        />
 
         <div className="bg-white p-4 sm:p-6">
           {/* <time datetime="2022-10-10" className="block text-xs text-gray-500">

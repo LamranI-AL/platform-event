@@ -13,7 +13,7 @@ const Hero = () => {
       router.push("/sign-in");
     } else {
       // redirect to dashboard page
-      router.push("/service-details/1");
+      router.push("/service-details");
     }
   };
   return (
