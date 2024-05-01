@@ -18,11 +18,11 @@ const ProductSeggestion = ({ events }) => {
               suggestion events
             </h2>
 
-            <p className="mx-auto mt-4 max-w-md text-gray-500">
+            {/* <p className="mx-auto mt-4 max-w-md text-gray-500">
               We ve chosen this section for you based on suggestions, almost
               like your favorite choice. While it s not exactly your top pick,
               we believe you might enjoy it. Enjoy
-            </p>
+            </p> */}
           </header>
           {/* <div className="flex flex-wrap lg:my-6 ">{displayEventSugg()}</div> */}
         </div>

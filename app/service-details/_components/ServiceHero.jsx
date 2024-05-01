@@ -64,13 +64,13 @@ const ServiceHero = () => {
               Trouvez votre service
             </h2>
 
-            <p className="mt-4 text-gray-600">
+            {/* <p className="mt-4 text-gray-600">
               Créez des moments mémorables avec nous! Que ce soit pour un
               anniversaire, une compétition ou un festival, notre équipe
               expérimentée s occupe de tout. Des événements impeccables, des
               souvenirs durables. Faites-nous confiance pour faire de votre
               vision une réalité!
-            </p>
+            </p> */}
 
             <a
               href="#"
