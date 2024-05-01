@@ -46,8 +46,8 @@ const ServiceHero = () => {
     },
   };
   const displayService = () => {
-    return servicess?.map((service) => {
-      return <ServiceMiniCard service={service} />;
+    return servicess?.map((service, key) => {
+      return <ServiceMiniCard service={service} key={key} />;
     });
   };
   return (
@@ -67,7 +67,7 @@ const ServiceHero = () => {
             <p className="mt-4 text-gray-600">
               Créez des moments mémorables avec nous! Que ce soit pour un
               anniversaire, une compétition ou un festival, notre équipe
-              expérimentée s'occupe de tout. Des événements impeccables, des
+              expérimentée s occupe de tout. Des événements impeccables, des
               souvenirs durables. Faites-nous confiance pour faire de votre
               vision une réalité!
             </p>
