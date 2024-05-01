@@ -23,9 +23,9 @@ const Hero = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
         viewport={true}
-        class="flex m-20"
+        className="flex m-20"
       >
-        <div class=" w-full sm:w-1/2 p-8">
+        <div className=" w-full sm:w-1/2 p-8">
           <div className="max-w-xl text-center inset-0 backdrop-blur-sm rounded-2xl p-4  ltr:sm:text-left rtl:sm:text-right">
             <h1 className="text-3xl font-extrabold sm:text-5xl">
               Plan your event now.
@@ -79,7 +79,7 @@ const Hero = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
         viewport={true}
-        class="flex m-20"
+        className="flex m-20"
       >
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
@@ -95,7 +95,7 @@ const Hero = () => {
           />
         </motion.div>
 
-        <div class=" w-full sm:w-1/2 p-8">
+        <div className=" w-full sm:w-1/2 p-8">
           <div className="max-w-xl text-center inset-0 backdrop-blur-sm rounded-2xl p-4  ltr:sm:text-left rtl:sm:text-right">
             <h1 className="text-3xl font-extrabold sm:text-5xl">
               Découvrez notre

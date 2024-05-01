@@ -1,8 +1,6 @@
 "use client";
 import BreadCrum from "@/app/_components/BreadCrum";
-import { apiClient } from "@/app/api-costum";
-import React, { useEffect, useState } from "react";
-import ProductHero from "./_components/ProductHero";
+import React from "react";
 import ProductSeggestion from "./_components/ProductSeggestion";
 
 const page = () => {
@@ -118,39 +116,11 @@ const page = () => {
         "https://lovely-horses-0fb3c65a2e.media.strapiapp.com/IMG_20230220_WA_0014_56d9953253.jpg",
     },
   ];
-  // const [event, setEvent] = useState({});
-  // const [events, setEvents] = useState([]);
-  // const [error, setError] = useState("");
-  // useEffect(() => {
-  //   displayEventById(params?.eventsId);
-  // }, []);
-  // const getEventsFilted = (category) => {
-  //   apiClient.get(`/event`).then(async (data) => {
-  //     const tempTable = data.data;
-  //     console.log(tempTable);
-  //     setEvents(tempTable);
-  //   });
-  // };
-  // const displayEventById = (id) => {
-  //   apiClient
-  //     .get(`/event`)
-  //     .then((res) => {
-  //       console.log(res.data);
-  //       // const tempTable = res?.data;
-  //       // setEvent(tempTable);
-  //     })
-  //     .catch((err) => {
-  //       setError(err.message);
-  //     });
-  // };
-  // getEventsFilted(event);
-
   return (
-    <div>
+    <div className="m-10">
       <div class="justify-center m-4">
         <BreadCrum actuellPath={"Event-details"} ancienPath={`Home`} />
       </div>
-      {/* {event?.length !== 0 && <ProductHero event={event} />} */}
       <ProductSeggestion events={eventts} />
     </div>
   );

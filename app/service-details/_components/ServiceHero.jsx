@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { apiClient } from "@/app/api-costum";
 import ServiceMiniCard from "./ServiceMiniCard";
@@ -37,21 +37,6 @@ const ServiceHero = () => {
         "Évadez-vous de la routine quotidienne avec nos sorties sur mesure ! Notre service de sorties vous emmène dans des lieux extraordinaires, choisis selon vos préférences et vos intérêts. Que vous souhaitiez explorer la nature, découvrir des sites historiques, ou simplement vous détendre dans un cadre pittoresque, nous avons l'excursion parfaite pour vous. Rejoignez-nous pour une aventure où chaque destination est une nouvelle découverte, et chaque moment est une escapade mémorable.",
     },
   ];
-  // useEffect(() => {
-  //   getServices();
-  // }, []);
-  // const [services, setServices] = useState([]);
-  // const getServices = () => {
-  //   apiClient
-  //     .get("/services?populate=*")
-  //     .then((response) => {
-  //       console.log(response.data.data);
-  //       setServices(response.data.data);
-  //     })
-  //     .catch((error) => {
-  //       alert(`Error! ${error}`);
-  //     });
-  // };
   const variants = {
     initial: { opacity: 0, y: 20 },
     inView: {

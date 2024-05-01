@@ -1,8 +1,6 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import EventCard from "./EventCard";
-import axios from "axios";
-import { apiClient } from "../api-costum";
 import { motion } from "framer-motion";
 
 const EventList = () => {
@@ -218,8 +216,8 @@ const EventList = () => {
 
   const displayEvent = () => {
     return eventts
-      ?.map((event) => {
-        return <EventCard key={event.id} event={event} />;
+      ?.map((event, key) => {
+        return <EventCard key={key} event={event} />;
       })
       .slice(0, 3);
   };

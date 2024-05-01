@@ -1,15 +1,12 @@
 "use client";
 import React from "react";
 import ServiceForm from "../apply/_components/ServiceForm";
-import ServiceHero from "./_components/servicehero";
+import ServiceHero from "./_components/ServiceHero";
 
 const page = () => {
-  //   window.alert(params.serviceId);
-  // console.log(params.serviceId);
   return (
-    <div>
+    <div className="m-10">
       <ServiceForm />
-      {/* hy from service display */}
       <ServiceHero />
     </div>
   );
