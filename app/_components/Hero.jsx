@@ -106,8 +106,8 @@ const Hero = () => {
             </h1>
 
             <p className="mt-4 max-w-lg sm:text-xl/relaxed">
-              Plongez dans l'atmosphère envoûtante d'un festival à thème
-              marocain.
+              {`Plongez dans l'atmosphère envoûtante d'un festival à thème
+              marocain.`}
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4 text-center">
